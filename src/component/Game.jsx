@@ -10,11 +10,13 @@ function Game() {
   const [gameOver, setGameOver] = useState(false);
 
   console.log(gameOver);
+  console.log(randomWord);
+
 
 
 
   useEffect(() => {
-    setWord('aslam');
+    setWord(randomWord);
     const eventManage = (e) => {
       const key = e.key.toLowerCase();
 
