@@ -74,13 +74,12 @@ function Game() {
     const currentLetter = letters[i][j];
     if (!currentLetter) return 'white';
 
-    if (currentLetter === word[j]) {
+    if (typeof word === 'string' && word[j] === currentLetter) {
       return 'green';
-    } else if (word.includes(currentLetter)) {
+    } else if (typeof word === 'string' && word.includes(currentLetter)) {
       return 'yellow';
     }
   };
-
   const rows = [];
 
   for (let i = 0; i < 6; i++) {
